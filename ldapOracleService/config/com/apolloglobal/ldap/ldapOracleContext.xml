@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.1.xsd">
+
+<!-- <bean id="jndiTemplate" class="org.springframework.jndi.JndiTemplate">
+		<constructor-arg type="java.util.Properties">
+			<props>
+				<prop key="java.naming.factory.initial">org.jnp.interfaces.NamingContextFactory</prop>
+				 <prop key="java.naming.provider.url">${java.naming.provider.url}</prop>
+				<prop key="java.naming.factory.url">org.jboss.naming:org.jnp.interfaces</prop>
+				
+			</props>
+		</constructor-arg>
+	</bean>
+	
+	<bean id="ldapOracleDataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
+		<property name="jndiTemplate" ref="jndiTemplate" />
+		<property name="jndiName" value="jdbc/ldapOracleDS"/>
+		<property name="lookupOnStartup" value="false"/>
+		<property name="cache" value="true"/>	
+		<property name="proxyInterface" value="javax.sql.DataSource"/>
+	</bean> -->
+
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="oracle.jdbc.OracleDriver" />
+        <property name="url"  value="jdbc:oracle:thin:@advijy-07:1522:orcl" />
+        <property name="username"  value="vinay" />
+        <property name="password"  value="vinay" />
+    </bean>
+    
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
+    	 <property name="dataSource" ref="dataSource" />
+    </bean>
+			  
+	<bean id="enqueueService"	class="com.apolloglobal.service.oracle.EnqueueServiceImpl">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<bean id="abstractJdbcDao" abstract="true">
+	 	<property name="jdbcTemplate" ref="jdbcTemplate" />
+	</bean>
+	
+	<bean id="jobControlDao"	class="com.apolloglobal.batch.audit.dao.JobControlDaoImpl"  parent="abstractJdbcDao" />
+		
+	<bean id="contextSource"
+		class="org.springframework.ldap.core.support.LdapContextSource">
+		<property name="url" value="ldap://192.168.5.203:389" />
+		<property name="base" value="dc=ecommerce,dc=com" />
+		<property name="userDn" value="cn=jason,dc=ecommerce,dc=com" />
+		<property name="password" value="secret" />
+	</bean>
+
+	<bean id="ldapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+		<constructor-arg ref="contextSource" />
+	</bean>
+
+	<bean id="ldapProfileDao"	class="com.apolloglobal.ldap.dao.LdapProfileDaoImpl">
+		<property name="ldapTemplate" ref="ldapTemplate" />
+	</bean>
+		
+		
+	<!-- scheduler service -->
+	<bean id="jobScheduler"	class=" com.apolloglobal.scheduler.service.JobSchedulerImpl">
+		<property name="jobControlDao" ref="jobControlDao" />
+	</bean>
+		
+</beans>

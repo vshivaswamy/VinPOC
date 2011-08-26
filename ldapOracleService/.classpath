@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="config"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/DemographicIntegration"/>
+	<classpathentry kind="lib" path="D:/downloads/AQ/10gLibs/ojdbc14.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-ldap-1.3.1.RELEASE-with-dependencies/spring-ldap-1.3.1.RELEASE/dist/spring-ldap-1.3.1.RELEASE-all.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.aop-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.asm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.aspects-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.context.support-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.expression-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.instrument-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.instrument.tomcat-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.jdbc-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.jms-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.orm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.oxm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.test-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.transaction-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.web-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.web.portlet-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.web.servlet-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="D:/downloads/spring/spring-framework-3.0.5.RELEASE/spring-framework-3.0.5.RELEASE/dist/org.springframework.web.struts-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Vinay/.m2/repository/junit/junit/4.8.2/junit-4.8.2.jar"/>
+	<classpathentry kind="lib" path="C:/Documents and Settings/Vinay/.m2/repository/org/apache/xmlbeans/xmlbeans/2.4.0/xmlbeans-2.4.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.generic.runtimeTarget/JBoss v5.0">
+		<attributes>
+			<attribute name="owner.project.facets" value="jst.utility"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
